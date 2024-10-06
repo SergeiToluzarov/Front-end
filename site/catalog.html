@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li class="navigation-item">
-                    <a class="icon-botton" href="#">
+                    <a class="icon-button" href="#">
                         <span class="visually-hidden">
                             Избранное
                         </span>
@@ -42,24 +42,24 @@
                     </a>
                 </li>
                 <li class="navigation-item">
-                    <a class="botton" href="#">Хочу сюда!</a>
+                    <a class="button" href="#">Хочу сюда!</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main class="main-inner">
-        <h1 class="inner-header-title">Гостиницы Седоны</h1>
-        <ul class="breadcrumbs">
-            <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html">
-                    <span class="visually-hidden">Главная</span>
-                </a>
-            </li>
-            <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link">Гостиницы</a>
-            </li>
-        </ul>
         <section class="filter">
+            <h1 class="inner-header-title">Гостиницы Седоны</h1>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs-item">
+                    <a class="breadcrumbs-link" href="index.html">
+                        <span class="visually-hidden">Главная</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs-item">
+                    <a class="breadcrumbs-link">Гостиницы</a>
+                </li>
+            </ul>
             <h2 class="visually-hidden">Фильтр списка гостиниц</h2>
             <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
                 <fieldset class="filter-field-group">
@@ -128,8 +128,10 @@
                     </button>
                 </fieldset>
                 <button class="button" type="submit">Применить</button>
-                <button class="button" type="reset">Сбросить</button>
+                <button class="button invisible-button" type="reset">Сбросить</button>
             </form>
+        </section>
+        <section class="results">
             <h2 class="visually-hidden">Результат поиска</h2>
             <form class="sorting" action="https://echo.htmlacademy.ru/" method="post">
                 <span class="sorting-title">Найдено гостиниц:</span>
@@ -166,7 +168,7 @@
                         <p> От 4000 ₽</p>
                     </div>
                     <a class="button" href="#">Подробнее</a>
-                    <a class="button" href="#">В избранное</a>
+                    <a class="button button-like" href="#">В избранное</a>
                     <p class="stars">4 звезды</p>
                     <p class="raiting">Рейтинг: 8,5</p>
                 </li>
@@ -180,7 +182,7 @@
                         <p> От 3000 ₽</p>
                     </div>
                     <a class="button" href="#">Подробнее</a>
-                    <a class="button" href="#">В избранное</a>
+                    <a class="button button-like" href="#">В избранное</a>
                     <p class="stars">3 звезды</p>
                     <p class="raiting">Рейтинг: 8,9</p>
                 </li>
@@ -208,7 +210,7 @@
                         <p> От 3000 ₽</p>
                     </div>
                     <a class="button" href="#">Подробнее</a>
-                    <a class="button" href="#">В избранное</a>
+                    <a class="button button-like" href="#">В избранное</a>
                     <p class="stars">2 звезды</p>
                     <p class="raiting">Рейтинг: 9,2</p>
                 </li>
@@ -251,7 +253,7 @@
                     <span class="visually-hidden">Ваш e-mail</span>
                     <input type="email" name="email" placeholder="Ваш e-mail">
                 </label>
-                <button class="subscribe-botton" type="submit">Подписаться</button>
+                <button class="button" type="submit">Подписаться</button>
             </form>
         </section>
     </main>
