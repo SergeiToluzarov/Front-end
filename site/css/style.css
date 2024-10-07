@@ -2,14 +2,14 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/ptsans-400.woff2") format("woff2");
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
     font-display: swap;
 }
 @font-face {
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("fonts/ptsans-700.woff2") format("woff2");
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
 }
 body {
@@ -25,6 +25,7 @@ body {
     font-weight: 700;
     text-align: center;
     text-decoration: none;
+    color: #000000;
 }
 .first-screen {
     background-image: url("../img/index-background.jpg");
@@ -63,11 +64,11 @@ body {
     height: 53px;
     width: 220px;
 }
-.advantage-1 {
+.advantage-1, li.advantages-item:nth-child(2) {
     background-color: #83b3d3;
     color: #ffffff;
 }
-li li.advantages-item:nth-child(2n+1) {
+li li.advantages-item:nth-child(2n+1), li.advantages-item:nth-child(2n+3) {
     background-color: rgba(131, 179, 211, 0.12);
     color: #000000;
 }
@@ -75,35 +76,30 @@ li li.advantages-item:nth-child(2n) {
     background-color: #ffffff;
     color: #000000;
 }
-li.advantages-item:nth-child(2) {
-    background-color: #83b3d3;
-    color: #ffffff;
-}
-li.advantages-item:nth-child(2n+3) {
-    background-color: rgba(131, 179, 211, 0.12);
-    color: #000000;
-}
 li.advantages-item:nth-child(4) {
     background-color: rgba(131, 179, 211, 0.2);
     color: #000000;
 }
-.button {
+.button, .result-list .button {
     background-color: #756257;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 16px;
+    font-family: "PT Sans", sans-serif;
 }
-.button-active{
+.result-list .button-active{
     background-color: #7DB54F;
 }
 button.button {
     background-color: #83B3D3;
     border: none;
+    font-size: 16px;
 }
 button.invisible-button {
     background-color: rgba(131, 179, 211, 0);
 }
-.pagination-link, .button-like {
+.pagination-link, .result-list .button-like {
     background-color: #83B3D3;
     color: #ffffff;
     text-decoration: none;
@@ -157,4 +153,42 @@ button.invisible-button {
 .filter-form-item {
     font-size: 18px;
     line-height: normal;
+}
+.sorting-title, .sorting-value {
+    font-size: 30px;
+    line-height: normal;
+    font-weight: 700;
+}
+.sorting-control, .result-list, .show, {
+    line-height: normal;
+    color: #333333;
+}
+.result-item a {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color:#000000;
+}
+.raiting {
+    font-size: 16px;
+}
+.pagination-show-more, .pagination-list {
+    font-size: 20px;
+    line-height: normal;
+}
+.show-control {
+    color: #333333;
+    font: inherit;
+}
+.catalog-subscribe {
+    height: 241px;
+    width: 800px;
+    background-image: none;
+    background-color: #ffffff;
+    color: #000000;
+}
+.subscribe-form .button {
+    font-size: 20px;
+    line-height: 26px;
+
 }
