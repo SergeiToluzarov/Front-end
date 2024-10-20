@@ -234,7 +234,7 @@ button.invisible-button {
     line-height: normal;
     font-weight: 700;
 }
-.sorting-control, .result-list, .show, {
+.sorting-control, .result-list, .show {
     line-height: normal;
     color: #333333;
 }
