@@ -10,7 +10,7 @@
     <header class="main-header">
         <nav class="navigation">
             <a class="main-logo" href="index.html">
-                <img class="logo" src="img/logo.svg" alt="Седона" width="139" height="70">
+                <img src="img/logo.svg" alt="Седона" width="139" height="70">
             </a>
             <ul class="navigation-list">
                 <li class="navigation-item">
@@ -135,8 +135,8 @@
         <section class="results">
             <h2 class="visually-hidden">Результат поиска</h2>
             <form class="sorting" action="https://echo.htmlacademy.ru/" method="post">
-                <span class="sorting-title">Найдено гостиниц:</span>
-                <span class="sorting-value">38</span>
+                <span class="sorting-title">Найдено гостиниц: </span>
+                <span class="sorting-description">38</span>
                 <h3 class="visually-hidden">Сортировка и отображение:</h3>
                 <select class="sorting-control" name="sorting" id="sorting">
                     <option class="cheap">Сначала дешевые</option>
@@ -216,8 +216,9 @@
                     <p class="raiting">Рейтинг: 9,2</p>
                 </li>
             </ul>
+
+            <button class="button pagination-show-more" type="button">Загрузить ещё</button>
             <div class="pagination-content">
-                <button class="button pagination-show-more" type="button">Загрузить ещё</button>
                 <ul class="pagination-list">
                     <li class="pagination-item">
                         <a class="pagination-link pagination-link-active">1</a>
@@ -247,7 +248,7 @@
                 </form>
             </div>
         </section>
-        <section class="catalog-subscribe">
+        <section class="subscribe catalog-subscribe">
             <h2 class="visually-hidden">Подписка на рассылку</h2>
             <div class="section-content">
                 <p class="section-title subscribe-title">Подпишитесь на рассылку</p>
@@ -255,7 +256,7 @@
                 <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
                     <label class="subscribe-field field">
                         <span class="visually-hidden">Ваш e-mail</span>
-                        <input type="email" name="email" placeholder="Ваш e-mail">
+                        <input class="form-input" type="email" name="email" placeholder="Ваш e-mail">
                     </label>
                     <button class="button" type="submit">Подписаться</button>
                 </form>
