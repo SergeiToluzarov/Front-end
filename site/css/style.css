@@ -504,6 +504,7 @@ li.advantages-item:nth-child(4) {
     border-radius: 10px;
     position: relative;
     margin-right: 3.5px;
+    margin-bottom: 5px;
 }
  .social-icon{
     position: absolute;
@@ -511,7 +512,7 @@ li.advantages-item:nth-child(4) {
     left: 0;
     right: 0;
     top: 0;
-    bottom: 5px;
+    bottom: 0px;
 
     fill: #83B3D3;
  }
@@ -531,7 +532,7 @@ li.advantages-item:nth-child(4) {
     line-height: 40px;
     text-decoration: none;
     color: #000000;
-    width: 361px;
+    min-width: 361px;
     height: 70px;
     border-radius: 10px;
     box-sizing: border-box;
@@ -556,6 +557,7 @@ li.advantages-item:nth-child(4) {
     box-sizing: border-box;
     border-radius: 10px;
     position: relative;
+
 }
 .footer-logo{
     position: absolute;
@@ -563,7 +565,7 @@ li.advantages-item:nth-child(4) {
     left: 0;
     right: 0;
     top: 0;
-    bottom: 5px;
+    bottom: 0;
     fill: #000000;
  }
 
