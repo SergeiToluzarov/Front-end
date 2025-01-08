@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.less","style.css"],"names":[],"mappings":"AACA;EACI,qBAAA;ACAJ","file":"style.css","sourcesContent":["// Начните писать стили здесь\nbody {\n    background-color: red;\n}","body {\n  background-color: red;\n}\n"]}
