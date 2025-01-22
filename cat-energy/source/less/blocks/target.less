@@ -1,0 +1,25 @@
+.target {
+    &__wrapper {
+        padding:0 20px;
+    }   
+    &__lose {
+        margin-top: 20px;
+        position: relative;
+    }
+    &__lose::after {
+        content: url(../../img/goal-lose.svg);
+        position: absolute;
+        top: 21px;
+        left: 22px;
+    }
+    &__gain {
+        margin-top: 20px;
+        position: relative;
+    }
+    &__gain::after {
+        content: url(../../img/goal-gain.svg);
+        position: absolute;
+        top: 24px;
+        left: 13px;
+    }
+}

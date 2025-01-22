@@ -1,0 +1,35 @@
+.promo {
+    &__wrapper{
+        position: relative;
+        color: #ffffff;
+        width: 320px;
+        background-color: rgba(104, 183, 56, 0.85);
+    }
+    &__wrapper::after{
+        position: absolute;
+        content: url("../../img/promo-cat.webp");
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+    &__title {
+        width: 250px;
+        padding-top: 27px;
+        padding-left: 36px;
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        padding-top: 25px;
+        padding-bottom: 164px;
+        padding-left: 60px;
+    }
+    &__image {
+        position: relative;
+        z-index: 1;
+        margin-top: -135px;
+        padding-left: 20px;
+    }
+    &__button {
+        margin: 3px 20px 0 20px;
+    }
+}

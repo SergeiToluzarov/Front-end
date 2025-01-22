@@ -1,0 +1,30 @@
+.site-menu {
+    width: inherit;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    display: none;
+    &__toggler {
+        background-image: url("../../img/cross.svg");
+        background-repeat: no-repeat;
+        background-position: 50%;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: -45px;
+        right: 20px;
+        border: none;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+    &__item {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Oswald", sans-serif;
+        font-size: 20px;
+        line-height: 20px;
+        padding: 20px 0 24px 0;
+        border-top: 1px solid #E6E6E6;
+    }
+}

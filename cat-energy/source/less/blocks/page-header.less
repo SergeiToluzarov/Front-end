@@ -1,0 +1,31 @@
+.page-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+    position: relative;
+    &__logo {
+        width: 191px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0 17px 0;
+    }
+    &__toggler {
+        background-image: url("../../img/menu.svg");
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 18px;
+        border: none;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+    &__main-nav {
+        position: absolute;
+        top: 65px;
+        left: -20px;
+        z-index: 2;
+    }
+}

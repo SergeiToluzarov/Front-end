@@ -1,0 +1,60 @@
+.pagination {
+    padding: 25px 0;
+    position: relative;
+    &__title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #111111;
+        padding: 53px 37px 8px 39px;
+        position: relative;
+        text-transform: uppercase;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-color: #D3D3D3;
+            transform: rotate(90deg);
+            top: 15px;
+            left: 125px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-color: #D3D3D3;
+            top: 15px;
+            left: 125px;
+        }
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 16px;
+        color: #444444;
+        padding: 0 30px 21px 29px;
+    }
+    &__button {
+        background-color: #F2F2F2;
+        color: #444444;
+    }
+    &::before {
+        content: "";
+        width: 320px;
+        height: 1px;
+        background-color: #EBEBEB;
+        position: absolute;
+        left: -20px;
+        top: -1px;
+    }
+    &::after {
+        content: "";
+        width: 320px;
+        height: 1px;
+        background-color: #EBEBEB;
+        position: absolute;
+        left: -20px;
+        bottom: 0px;
+    }
+}

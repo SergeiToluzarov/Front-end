@@ -1,0 +1,35 @@
+.gift{
+    padding: 35px 20px;
+    &__wrapper {
+        position: relative;
+        background-color: rgba(104, 183, 56, 0.85);
+        box-sizing: border-box;
+        width: 280px;
+        min-height: 290px;
+        &::before {
+            content: url(../../img/cat-in-bag.webp);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        &::after {
+            content: url(../../img/icon_gift.svg);
+            position: absolute;
+            top: 59px;
+            left: 101px;
+            z-index: 1;
+        }
+    }
+    &__text {
+        color: #FFFFFF;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        width: 161px;
+        position: absolute;
+        top: 187px;
+        left: 58px;
+
+    }
+}
