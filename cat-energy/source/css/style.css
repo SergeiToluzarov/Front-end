@@ -20,6 +20,14 @@ a {
   text-decoration: none;
   color: #000000;
 }
+.link {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: start;
+}
 li {
   list-style-type: none;
 }
@@ -52,6 +60,13 @@ li {
   text-align: center;
   display: inline-block;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
 .button {
   font-family: "Oswald", sans-serif;
   font-size: 14px;
@@ -65,20 +80,12 @@ li {
   display: block;
   text-transform: uppercase;
 }
-.link {
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16 px;
-  text-transform: uppercase;
-  text-align: start;
+.button:hover {
+  background-color: #5EAA2F;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0;
-  /* <-- Apparently some margin are still there even though it's hidden */
+.button:active {
+  background-color: #5EAA2F;
+  color: rgba(255, 255, 255, 0.3);
 }
 .page {
   font-family: "Lato", sans-serif;
@@ -115,6 +122,12 @@ input::-webkit-inner-spin-button {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0 17px 0;
+}
+.page-header__logo:hover {
+  opacity: 80%;
+}
+.page-header__logo:active {
+  opacity: 60%;
 }
 .page-header__toggler {
   background-image: url("../../img/menu.svg");
@@ -296,6 +309,15 @@ input::-webkit-inner-spin-button {
   position: absolute;
   top: 37px;
   left: 117px;
+}
+.goal__link:hover::after {
+  content: url("../../img/arrow-long.svg");
+  position: absolute;
+  top: 37px;
+  left: 117px;
+}
+.goal__link:active {
+  opacity: 30%;
 }
 .info__wrapper {
   margin-top: 20px;
@@ -607,6 +629,12 @@ input::-webkit-inner-spin-button {
   background-color: #F2F2F2;
   color: #444444;
 }
+.pagination__button:hover {
+  background-color: #EBEBEB;
+}
+.pagination__button:active {
+  color: rgba(68, 68, 68, 0.3);
+}
 .pagination::before {
   content: "";
   width: 320px;
@@ -791,6 +819,35 @@ input::-webkit-inner-spin-button {
   border: 1px solid #E7E7E7;
   border-radius: 0px;
 }
+.field__input:hover {
+  border-color: #CDCDCD;
+}
+.field__input:hover + .field__mail {
+  stroke: #222222;
+}
+.field__input:hover + .field__tel {
+  fill: #222222;
+}
+.field__input:focus {
+  border-color: #444444;
+  outline: 1px solid #444444;
+}
+.field__input:focus + .field__mail {
+  stroke: #68B738;
+}
+.field__input:focus + .field__tel {
+  fill: #68B738;
+}
+.field__input:invalid {
+  border-color: #FF8282;
+  outline: 1px solid #FF8282;
+}
+.field__input:invalid + .field__mail {
+  stroke: #FF8282;
+}
+.field__input:invalid + .field__tel {
+  fill: #FF8282;
+}
 .field__textarea {
   width: 280px;
   min-height: 150px;
@@ -802,6 +859,16 @@ input::-webkit-inner-spin-button {
   color: #444444;
   border: 1px solid #E7E7E7;
   border-radius: 0px;
+}
+.field__image {
+  position: absolute;
+  right: 14px;
+}
+.field__mail {
+  stroke: #000000;
+}
+.field__tel {
+  fill: #000000;
 }
 .control {
   flex-direction: row-reverse;
@@ -844,5 +911,12 @@ input::-webkit-inner-spin-button {
   top: 7px;
   left: 5px;
   color: #68B738;
+}
+.control:hover .control__radio,
+.control:hover .control__checkbox {
+  border-color: #BABABA;
+}
+.control:active {
+  opacity: 30%;
 }
 /*# sourceMappingURL=style.css.map */

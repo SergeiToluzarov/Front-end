@@ -111,7 +111,6 @@ img {
     height: 2px;
     background-color: #756257;
     content: "";
-    z-index: 1;
   }
 .navigation-user {
     display: flex;

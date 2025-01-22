@@ -59,6 +59,36 @@
         color: #444444;
         border: 1px solid #E7E7E7;
         border-radius: 0px;
+        &:hover {
+            border-color: #CDCDCD;
+            + .field__mail {
+                stroke: #222222;
+            }
+            + .field__tel {
+                fill: #222222;
+            }
+        }
+        &:focus {
+            border-color: #444444;
+            outline: 1px solid #444444;
+            + .field__mail {
+                stroke: #68B738;
+            }
+            + .field__tel {
+                fill: #68B738;
+            }
+
+        }
+        &:invalid {
+            border-color: #FF8282;
+            outline: 1px solid #FF8282;
+            + .field__mail {
+                stroke: #FF8282;
+            }
+            + .field__tel {
+                fill: #FF8282;
+            }
+        }
     }
     &__textarea {
         width: 280px;
@@ -71,5 +101,15 @@
         color: #444444;
         border: 1px solid #E7E7E7;
         border-radius: 0px;
+    }
+    &__image {
+        position: absolute;
+        right: 14px;
+    }
+    &__mail {
+        stroke: #000000;
+    }
+    &__tel {
+        fill: #000000;
     }
 }
