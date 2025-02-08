@@ -1,21 +1,56 @@
 .goal {
     background-color: #F2F2F2;
+    padding-left: 20px;
+    @media (min-width: @tablet-width) {
+        padding-left: 53px
+    }
+    @media (min-width: @desktop-width) {
+        padding-left: 52px;
+        width: 570px;
+        box-sizing: border-box;
+    }
+
     &__title {
         font-size: 24px;
         line-height: 37px;
         padding-top: 30px;
-        padding-left: 91px;
+        padding-left: 71px;
         text-transform: uppercase;
+        @media (min-width: @tablet-width) {
+            font-size: 36px;
+            line-height: 36px;
+            padding-top: 77px;    
+            padding-left: 0;
+        }
+        @media (min-width: @desktop-width) {
+            padding-left: 214px;
+        }
     }
     &__text {
         padding-top: 29px;
-        padding-left: 20px;
+        @media (min-width: @tablet-width) {
+            width: 340px;
+            padding-top: 24px;
+        }
+        @media (min-width: @desktop-width) {
+            width: 467px;
+            padding-top: 73px;
+        }
     }
     &__link {
-        padding: 38px 0 18px 20px;
+        padding: 38px 0 18px 0;
         display: block;
         width: 134px;
         position: relative;
+        @media (min-width: @tablet-width) {
+            padding: 52px 0 57px 0;
+            width: 165px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @media (min-width: @desktop-width) {
+            padding: 27px 0 59px 0;
+        }
         &::before {
             content: "";
             width: 240px;
@@ -23,18 +58,33 @@
             background-color: #D9D9D9;
             position: absolute;
             top: 23px;
+            @media (min-width: @tablet-width) {
+                content: none;
+            }    
         }
         &::after {
             content: url("../../img/arrow.svg");
             position: absolute;
             top: 37px;
-            left: 117px;
+            right: 8px;
+            @media (min-width: @tablet-width) {
+                top: 50px;
+            } 
+            @media (min-width: @desktop-width) {
+                top: 25px;
+            }
         }
         &:hover::after {
             content: url("../../img/arrow-long.svg");
             position: absolute;
             top: 37px;
-            left: 117px;
+            right: 8px;
+            @media (min-width: @tablet-width) {
+                top: 50px;
+            } 
+            @media (min-width: @desktop-width) {
+                top: 25px;
+            }
         }
         &:active {
             opacity: 30%;

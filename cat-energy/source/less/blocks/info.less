@@ -1,41 +1,132 @@
 .info {
+    @media (min-width: @tablet-width) {
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 768px;
+            border-bottom: 1px solid #E6E6E6;
+            left: -30px;
+            bottom: 0;
+        }
+    }
+    @media (min-width: @desktop-width) {
+        &::after {
+            content: none;
+        }
+    }
     &__wrapper {
-        margin-top: 20px;
+        margin-top: 40px;
         padding: 0 20px;
+        @media (min-width: @tablet-width) {
+            padding: 0 30px;
+        }
+        @media (min-width: @desktop-width) {
+            padding: 0 110px;
+        }
     }
     &__title{
         line-height: 40px;
+        @media (min-width: @tablet-width) {
+            line-height: 60px;
+        }
     }
     &__list{
-        margin-top: 20px;
-        margin-bottom: 49px;
+        padding: 20px 0 49px 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;   
+        position: relative;
+        @media (min-width: @tablet-width) {
+            padding: 32px 75px 10px 0;    
+            justify-content: space-between;
+        }
+        @media (min-width: @desktop-width) {
+            padding:32px 0 26px 0;
+        }
     }
+
     &__item {
-        padding-top: 20px;
-        padding-left: 80px;
-        min-height: 60px;
         color: #444444;
+        padding: 20px 0 0 80px;
+        min-height: 60px;
+        max-width: 280px;
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-position: 0px 20px;
+        background-size: 60px 60px;
+        @media (min-width: @tablet-width) {
+            max-width: 250px;
+            min-height: 280px;
+            padding: 151px 0 57px 0;
+            background-position: 0px 40px;
+            background-size: 80px 80px;
+            position: relative;
+            margin-bottom: 37px;
+        }
     }
     &__item--healthy {
         background-image: url("../../img/info-1.svg");
-        background-repeat: no-repeat;
-        background-position: 0px 20px;
+        @media (min-width: @tablet-width) {
+            &::after {
+                content: "1";
+                color: #f2f2f2;
+                font-family: "Oswald", sans-serif;
+                font-size: 280px;
+                line-height: 280px;
+                position: absolute;
+                top: 0;
+                left: 120px;
+                z-index: -1;
+            }
+        }
     }
     &__item--simple {
         background-image: url("../../img/info-2.svg");
-        background-repeat: no-repeat;
-        background-position: 0px 20px;
+        @media (min-width: @tablet-width) {
+            &::after {
+                content: "2";
+                color: #f2f2f2;
+                font-family: "Oswald", sans-serif;
+                font-size: 280px;
+                line-height: 280px;
+                position: absolute;
+                top: 0;
+                left: 112px;
+                z-index: -1;
+            }
+        }
     }
     &__item--eating{
         background-image: url("../../img/info-3.svg");
-        background-repeat: no-repeat;
-        background-position: 0px 20px;
+        @media (min-width: @tablet-width) {
+            &::after {
+                content: "3";
+                color: #f2f2f2;
+                font-family: "Oswald", sans-serif;
+                font-size: 280px;
+                line-height: 280px;
+                position: absolute;
+                top: 0;
+                left: 113px;
+                z-index: -1;
+            }
+        }
     }
     &__item--time {
         background-image: url("../../img/info-4.svg");
-        background-repeat: no-repeat;
-        background-position: 0px 20px;
+        @media (min-width: @tablet-width) {
+            &::after {
+                content: "4";
+                color: #f2f2f2;
+                font-family: "Oswald", sans-serif;
+                font-size: 280px;
+                line-height: 280px;
+                position: absolute;
+                top: 0;
+                left: 114px;
+                z-index: -1;
+            }
+        }
     }
-}  
+}

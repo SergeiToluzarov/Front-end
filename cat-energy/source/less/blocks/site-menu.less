@@ -1,10 +1,11 @@
 .site-menu {
-    width: inherit;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
     background-color: #ffffff;
     display: none;
+    @media (min-width: @tablet-width) {
+        display: block;
+        background-color:  transparent;
+    }
     &__toggler {
         background-image: url("../../img/cross.svg");
         background-repeat: no-repeat;
@@ -17,6 +18,28 @@
         border: none;
         background-color: #ffffff;
         cursor: pointer;
+        @media (min-width: @tablet-width) {
+            display: none;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: @tablet-width) {
+            flex-direction: row;;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: 2px;
+            padding: 42px 0 10px 0;
+
+        }
+        @media (min-width: @desktop-width) {
+            padding: 69px 0 8px 0;
+            &--index {
+                color: #ffffff
+            }
+        } 
+
     }
     &__item {
         text-align: center;
@@ -26,5 +49,23 @@
         line-height: 20px;
         padding: 20px 0 24px 0;
         border-top: 1px solid #E6E6E6;
+        @media (min-width: @tablet-width) {
+            font-size: 18px;
+            line-height: 24px;
+            border: none;
+            padding: 0;
+            &--current {
+                border-bottom: 2px solid #68B738;
+            }
+        }
+        @media (min-width: @desktop-width) {
+            font-size: 20px;
+            line-height: 30px;
+            &--index_current{
+                border-bottom: 2px solid #ffffff;
+
+            }
+        } 
     }
+    
 }

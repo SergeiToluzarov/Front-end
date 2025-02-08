@@ -4,21 +4,52 @@
     border: 1px solid #CDCDCD;
     border-radius: 6px;
     background-color: #FFFFFF;
+    @media (min-width: @tablet-width) {
+        width: 426px;
+        height: 6px;
+        box-sizing: border-box;
+        background-color: #dcdcdc;
+    }
+    @media (min-width: @desktop-width) {
+    }
     &__bar {
         position: absolute;
         background-color: #68B738;
         top: 4px;
         left: 6px;
         border-radius: 6px;
+        width: 36px;
+        height: 6px;
+        box-sizing: border-box;
+        @media (min-width: @tablet-width) {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 1px solid #CDCDCD;
+            left: 196px;
+            top: -14px;
+        }
+        @media (min-width: @desktop-width) {
+        }
     }
     &__toggle {
         position: absolute;
         top: 0;
         right: 0;
         width: 6px;
-        height: 6px;;
-        border: inherit;
-        border-radius: inherit;
-        background-color: inherit;
+        height: 6px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 50%;
+        background-color: #68B738;
+        @media (min-width: @tablet-width) {
+            width: 8px;
+            height: 8px;
+            top: 12px;
+            right: 12px;
+        }
+        @media (min-width: @desktop-width) {
+        }
     }
 }

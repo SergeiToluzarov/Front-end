@@ -1,24 +1,72 @@
 .example {
-    background-color: #EAEAEA;
     &__wrapper {
-        padding: 25px 20px 0 20px;
+        padding: 0 20px;
+        background-color: #EAEAEA;
+        @media (min-width: @tablet-width) {
+            padding: 0 30px;
+            background-color: #ffffff;
+        }
+        @media (min-width: @desktop-width) {
+            padding: 0 110px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f2f2f2;
+        }
     }
     &__title {
+        padding-top: 25px;
         line-height: 40px;
+        @media (min-width: @tablet-width) {
+            padding-top: 43px;
+            line-height: 60px;
+        }
+        @media (min-width: @desktop-width) {
+            width: 1440px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            padding: 43px 0 76px 110px;
+            margin: 0 -110px;
+        }
+    }
+    &__content {
+        @media (min-width: @desktop-width) {
+            width: 436px;
+            padding: 70px 193px 75px 0;
+        }
     }
     &__text {
         padding-top: 40px;
+        @media (min-width: @tablet-width) {
+            color: #444444;
+            padding-top: 63px;
+        }
+        @media (min-width: @desktop-width) {
+            padding: 0;
+        }
     }
     &__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         padding-top: 20px;
+        @media (min-width: @tablet-width) {
+            padding-top: 54px;
+            align-items: center;
+            padding-bottom: 250px;
+        }
+        @media (min-width: @desktop-width) {
+            padding: 0;
+            padding-top: 69px;
+            justify-content: left;
+        }
     }
     &__item {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        @media (min-width: @desktop-width) {
+            padding-right: 42px;
+        }
     }
     &__description {
         font-family: "Oswald", sans-serif;
@@ -31,14 +79,30 @@
         height: 56px;
         font-size: 24px;
         line-height: 24px;
+        box-sizing: border-box;
+        @media (min-width: @tablet-width) {
+            width: 162px;
+            height: 72px;
+            font-size: 30px;
+            line-height: 37px;
+        }
     }
     &__caption {
         background-color: #EAEAEA;
-        width: 87px;
+        width: 77px;
+        padding: 0 5px;
         text-align: center;
         margin-top: -12px;
         font-size: 12px;
         line-height: 12px;
+        @media (min-width: @tablet-width) {
+            background-color: inherit;
+            width: initial;
+            padding: 0 8px;
+            margin-top: -9px;
+            font-size: 14px;
+            line-height: 14px;
+        }
     }
     &__cost {
         text-transform: uppercase;
@@ -46,10 +110,38 @@
         font-family: "Oswald", sans-serif;
         padding: 20px 46px 0 46px;
         display: block;
+        @media (min-width: @tablet-width) {
+            width: 174px;
+            font-size: 20px;
+            line-height: 25px;
+            padding: 0;
+            padding-left: 125px;
+            text-align: end;
+        }
+        @media (min-width: @desktop-width) {
+            width: 327px;
+            line-height: 20px;
+            text-align: start;
+            padding: 55px 0 0 0;
+            display: flex;
+            justify-content: space-between;
+        }
     }
     &__change {
         padding-top: 40px;
         position:relative;
         min-height: 317px;
+        @media (min-width: @tablet-width) {
+            padding: 0 30px;
+            min-height: 462px;
+            background-color: #eaeaea;
+            margin: 0 -30px;
+        }
+        @media (min-width: @desktop-width) {
+            min-width: 591px;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
     }
 }

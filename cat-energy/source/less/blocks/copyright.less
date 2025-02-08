@@ -1,4 +1,8 @@
 .copyright {
+    width: 280px;
+    @media (min-width: @tablet-width) {
+        width: initial;
+    }
     &__link {    
         display: flex;
         flex-wrap: wrap;    
@@ -9,5 +13,8 @@
         font-size: 16px;
         line-height: 18.4px;
         color: #444444;
+        @media (min-width: @tablet-width) {
+            padding: 6px 22px 10px 0;
+        }
     }
 }
