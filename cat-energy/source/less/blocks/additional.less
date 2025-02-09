@@ -3,16 +3,36 @@
         font-family: Oswald;
         font-size: 24px;
         line-height: 24px;
-        padding: 25px 0 36px 0;
+        padding: 25px 22px 36px 0;
         position: relative;
+        width: 226px;
+        background-color: #ffffff;
         &::after {
             content: "";
-            width: 53px;
+            width: 300px;
             height: 2px;
             background-color: #68B738;
             position: absolute;
             top: 40px;
-            right: -75px;
+            left: 0;
+            z-index: -1;
+            @media (min-width: @tablet-width) {
+                width: @tablet-width;
+                left: -30px;
+                top: 29px;
+            }
+            @media (min-width: @desktop-width) {
+                padding: 69px 0 8px 0;
+            }
+        }
+        @media (min-width: @tablet-width) {
+            width: 339px;
+            padding: 8px 36px 80px;
+            font-size: 36px;
+            line-height: 36px;
+        }
+        @media (min-width: @desktop-width) {
+            padding: 69px 0 8px 0;
         }
     }
 }

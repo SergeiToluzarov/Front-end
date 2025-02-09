@@ -1,17 +1,38 @@
 .gift{
     padding: 35px 20px;
+    position: relative;
+    @media (min-width: @tablet-width) {
+        padding: 69px 30px 76px;
+    }
+    @media (min-width: @desktop-width) {
+
+    }
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @media (min-width: @tablet-width) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (min-width: @desktop-width) {
+    
+        }
+    }
     &__wrapper {
         position: relative;
         background-color: rgba(104, 183, 56, 0.85);
         box-sizing: border-box;
         width: 280px;
-        min-height: 290px;
-        &::before {
-            content: url(../../img/cat-in-bag.webp);
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
+        height: 290px;
+        @media (min-width: @tablet-width) {
+            width: 708px;
+            height: 200px;
+        }
+        @media (min-width: @desktop-width) {
+    
         }
         &::after {
             content: url(../../img/icon_gift.svg);

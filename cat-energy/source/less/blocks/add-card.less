@@ -5,6 +5,16 @@
     justify-content: space-between;
     padding: 13px 0 19px 0; 
     border-bottom: 1px solid #CDCDCD;
+    @media (min-width: @tablet-width) {
+        border: 1px solid #CDCDCD;
+        border-top: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 25px 38px 28px;
+    }
+    @media (min-width: @desktop-width) {
+
+    }
     &:nth-of-type(1){
         border-top: 1px solid #CDCDCD;
       }
@@ -14,6 +24,14 @@
         line-height: 16px;
         color: #222222;
         padding-bottom: 13px;
+        @media (min-width: @tablet-width) {
+            font-size: 20px;
+            line-height: 20px;
+            padding-bottom: 25px;
+        }
+        @media (min-width: @desktop-width) {
+    
+        }
     }
     &__list {
         display: flex;
@@ -26,5 +44,23 @@
         color: #444444;
         font-size: 14px;
         line-height: 14px;
+        @media (min-width: @tablet-width) {
+            font-size: 16px;
+            line-height: 20px;
+            padding: 0;
+        }
+        @media (min-width: @desktop-width) {
+    
+        }
+    }
+    &__button {
+        @media (min-width: @tablet-width) {
+            width: 100%;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        @media (min-width: @desktop-width) {
+    
+        }
     }
 }
