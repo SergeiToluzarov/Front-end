@@ -33,23 +33,28 @@
 
     }
     &__item {
-        max-height: 22px;
-        
+        &--vk {
+            width: 23px;
+            height: 16px;
+        }
+        &--instagram {
+            width: 16px;
+            height: 16px;
+        }
+        &--facebook {
+            width: 27px;
+            height: 34px;
+        }
         @media (min-width: @tablet-width) {
-            max-height: initial;
             &--vk {
-
-                content: url(../../img/icon_vkontakte.svg);
                 width: 30px;
                 height: 22px;
             }
             &--instagram {
-                content: url(../../img/icon_instagram.svg);
                 width: 23px;
                 height: 23px;
             }
             &--facebook {
-                content: url(../../img/icon_facebook.svg);
                 width: 33px;
                 height: 33px;
             }

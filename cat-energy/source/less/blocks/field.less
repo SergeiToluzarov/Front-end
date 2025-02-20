@@ -1,6 +1,15 @@
 .field {
     border: none;
     position: relative;
+    @media (min-width: @tablet-width) {
+        &:nth-of-type(2) &__item:not(:last-of-type){
+            padding-bottom: 13px;
+        }
+    }
+    @media (min-width: @desktop-width) {
+        min-width: 569px;
+        box-sizing: border-box;
+    }
     .form__profile &::after {
         content: "";
         width: 320px;
@@ -9,6 +18,9 @@
         position: absolute;
         left: -20px;
         bottom: 0px;
+        @media (min-width: @tablet-width) {
+            content: none;
+        }
     }
     &__title {
         font-family: Oswald;
@@ -16,8 +28,7 @@
         font-weight: 400;
         line-height: 26px;
         text-align: left;       
-        padding-top: 13px;
-        padding-right: 20px;
+        padding: 13px 20px 35px 0;
         background-color: #ffffff;
         &::after {
             content: "";
@@ -28,14 +39,51 @@
             z-index: -1;
             top: 29px;
             right: -20px;
+            @media (min-width: @tablet-width) {
+                width: @tablet-width;
+                left: -30px;
+                right: initial;
+                top: 89px;
+            }
+            @media (min-width: @desktop-width) {
+                width: @desktop-width;
+                left: -70px;
+                
+            }
+        }
+        @media (min-width: @tablet-width) {
+            font-size: 36px;
+            line-height: 36px;
+            padding: 65px 40px 76px 39px;
+            position: relative;
+            left: -39px;
+            br {
+                display: none;
+            }
         }
     }
     &__additional {
         @media (min-width: @tablet-width) {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
+            width: 565px;
         }
         @media (min-width: @desktop-width) {
+            width: 100%;
+        }
+    }
+    &__list {
+        &--contacts {
+            @media (min-width: @desktop-width) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .field__item {
+                    width: 569px;
+                }  
+            } 
 
         }
     }
@@ -43,6 +91,17 @@
         position: relative;
         &:not(:nth-last-of-type(1)){
             padding-bottom: 13px;
+        }
+        @media (min-width: @tablet-width) {
+            &:not(:nth-last-of-type(1)) {  
+                padding-bottom: 20px;            
+            }
+            .field__additional &{
+                width: 221px;
+            }
+        }
+        @media (min-width: @desktop-width) {
+            max-width: 569px;
         }
     }
     &__label {
@@ -56,7 +115,11 @@
         line-height: 18px;
         color: #444444;
         padding-right: 12px;
-
+        @media (min-width: @tablet-width) {
+            font-size: 20px;
+            line-height: 30px;       
+            padding-right: 0;     
+        }
     }
     &__input {
         flex-grow: 1;
@@ -68,6 +131,11 @@
         color: #444444;
         border: 1px solid #E7E7E7;
         border-radius: 0px;
+        @media (min-width: @tablet-width) {
+            font-size: 20px;
+            line-height: 30px;
+            padding: 10px 0 10px 19px;
+        }
         &:hover {
             border-color: #CDCDCD;
             + .field__mail {
@@ -100,8 +168,10 @@
         }
     }
     &__textarea {
+        position: relative;
+        z-index: 1;
         width: 280px;
-        min-height: 150px;
+        height: 150px;
         resize: none;
         text-transform: uppercase;
         font-family: Oswald;
@@ -110,15 +180,57 @@
         color: #444444;
         border: 1px solid #E7E7E7;
         border-radius: 0px;
+        box-sizing: border-box;
+        padding: 9px 0 0 15px;
+        @media (min-width: @tablet-width) {
+            width: 631px;
+            height: 174px;
+            font-size: 20px;
+            line-height: 30px;
+            padding: 10px 0 0 19px;
+        }
+        @media (min-width: @desktop-width) {
+            width: 100%;
+        }
+        &:hover {
+            border-color: #CDCDCD;
+            + .field__mail {
+                stroke: #222222;
+            }
+            + .field__tel {
+                fill: #222222;
+            }
+        }
+        &:focus {
+            border-color: #444444;
+            outline: 1px solid #444444;
+            + .field__mail {
+                stroke: #68B738;
+            }
+            + .field__tel {
+                fill: #68B738;
+            }
+
+        }
+        &:invalid {
+            border-color: #FF8282;
+            outline: 1px solid #FF8282;
+            + .field__mail {
+                stroke: #FF8282;
+            }
+            + .field__tel {
+                fill: #FF8282;
+            }
+        }
     }
     &__image {
         position: absolute;
         right: 14px;
-    }
-    &__mail {
-        stroke: #000000;
-    }
-    &__tel {
-        fill: #000000;
+        &--email {
+            stroke: #000000;
+        }
+        &--tel {
+            fill: #000000;
+        }
     }
 }

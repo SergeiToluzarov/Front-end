@@ -13,14 +13,11 @@
       <a href="index.html" class="page-header__logo">
         <img src="img/logo_text.svg" alt="Cat-Energy" width="101" height="18" aria-hidden="true">
       </a>
-      <button class="page-header__toggler" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <nav class="page-header__main-nav main-nav">
-        <div class="main-nav__wrapper site-menu">
-          <button class="site-menu__toggler">
-            <span class="visually-hidden">Закрыть меню</span>
-          </button>
+      <nav class="page-header__site-menu site-menu site-menu--nojs site-menu--closed">
+        <button class="site-menu__toggler" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="site-menu__wrapper">
           <ul class="site-menu__list">
             <li class="site-menu__item">
               <a href="index.html">Главная</a>
@@ -28,21 +25,22 @@
             <li class="site-menu__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-menu__item  site-menu__item--current">
+            <li class="site-menu__item site-menu__item--current">
               <a href="#">Подбор программ</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+
     <main class="page__main page-main">
-      <h1 class="page-main__header title">Подбор программы</h1>
+      <h1 class="page-main__header page-main__header--form title">Подбор программы</h1>
       <form class="page-main__form form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="form__profile">
           <h2 class="visually-hidden">Анкетные данные</h2>
           <p class="form__text text">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
           <fieldset class="form__field field">
-            <legend class="field__title visually-hidden">Основные данные питомца</legend>
+            <legend class="visually-hidden">Основные данные питомца</legend>
             <ul class="field__list ">
               <li class="field__item">
                 <label class="field__label" for="name">
@@ -65,7 +63,7 @@
             </ul>
           </fieldset>
           <fieldset class="form__field field">
-            <legend class="field__title visually-hidden">Цель программы</legend>
+            <legend class="visually-hidden">Цель программы</legend>
             <ul class="field__list">
               <li class="field__item">
                 <label class="field__label control" for="loss">
@@ -93,12 +91,12 @@
         </div>
         <fieldset class="form__field field">
           <legend class="field__title">Контактные данные<br> (владельца кота)</legend>
-          <ul class="field__list ">
+          <ul class="field__list field__list--contacts">
             <li class="field__item">
               <label class="field__label" for="email">
                 <span class="field__lead">E-mail:<span class="form__asterix">*</span></span>
                 <input class="field__input" type="email" name="email" id="email" placeholder="Ваш e-mail" value="kuklachev@gmail.com" required>
-                <span class="field__image field__mail">
+                <span class="field__image field__image--email">
                   <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" fill="none">
                     <path stroke-width="1.3" d="M.65 5.848v8M17.65 5.848v8M0 13.198h18M0 1.198h18M17.35 3.03 9 9.524.65 3.03V1.498h16.7V3.03Z"/></svg>
                 </span>
@@ -108,7 +106,7 @@
               <label class="field__label" for="tel">
                 <span class="field__lead">Вес (кг):<span class="form__asterix">*</span></span>
                 <input class="field__input" type="tel" name="tel" id="tel" placeholder="Ваш номер телефона" value="8 (960) 900-60-90" required pattern="^8 \(\d{3}\) \d{3}-\d{2}-\d{2}$|^8\d{10}">
-                <span class="field__image field__tel">
+                <span class="field__image field__image--tel">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"><g clip-path="url(#a)">
                     <path d="M17.9 9.753H9.4v1.204h8.5l-2.1 2.107.9.903 3.1-3.11a.754.754 0 0 0 0-.904l-3.1-3.11-.9.903 2.1 2.007ZM8.1 19.787v-6.221a.653.653 0 0 0-.6-.602H3.1a1.226 1.226 0 0 0 1.2 1.204h2.5v5.017H3.1a1.784 1.784 0 0 1-1.728-1.02 1.801 1.801 0 0 1-.172-.686V3.431a1.78 1.78 0 0 1 .483-1.25A1.767 1.767 0 0 1 2.9 1.624h3.9v5.017H4.4a1.218 1.218 0 0 0-1.2 1.204h4.4a.649.649 0 0 0 .6-.602V.923A.863.863 0 0 0 7.5.32H3.1a2.99 2.99 0 0 0-2.151.81A3.01 3.01 0 0 0 0 3.23v13.948a2.91 2.91 0 0 0 .772 2.192 2.89 2.89 0 0 0 2.128.919h4.6a.499.499 0 0 0 .6-.502Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 .32h20v20.07H0z"/></clipPath></defs></svg>                
                 </span>
@@ -153,8 +151,10 @@
             </li>
           </ul>
         </fieldset>
-        <button class="form__button button" type="submit">Отправить заявку</button>
-        <p class="form__notation"><span class="form__asterix">*</span>— Обязательные поля</p>
+        <div class="form__wrapper">
+          <button class="form__button button" type="submit">Отправить заявку</button>
+          <p class="form__notation"><span class="form__asterix">*</span>— Обязательные поля</p>
+        </div>
       </form>
     </main>
     <footer class="page__footer page-footer">
@@ -210,5 +210,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.site-menu');
+      var navToggle = document.querySelector('.site-menu__toggler');
+      
+      navMain.classList.remove('site-menu--nojs');
+      
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('site-menu--closed')) {
+          navMain.classList.remove('site-menu--closed');
+          navMain.classList.add('site-menu--opened');
+        } else {
+          navMain.classList.add('site-menu--closed');
+          navMain.classList.remove('site-menu--opened');
+        }
+      });
+    </script>
   </body>
 </html>

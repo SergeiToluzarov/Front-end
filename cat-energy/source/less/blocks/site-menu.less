@@ -1,26 +1,78 @@
 .site-menu {
     box-sizing: border-box;
     background-color: #ffffff;
-    display: none;
+    width: 320px;
     @media (min-width: @tablet-width) {
         display: block;
         background-color:  transparent;
+        min-width: 440px;
+    }
+    @media (min-width: @desktop-width) {
+        width: 478px;
+    } 
+    &--nojs {
+        position: static;
+        .site-menu__toggler {
+            display: none;
+        }
+        .site-menu__wrapper {
+            display: block;
+        }
+    }
+    &--closed &__wrapper {
+        display: none;
+        @media (min-width: @tablet-width) {
+            display: block;
+        } 
+    }
+    &--opened &__wrapper {
+        display: block;
     }
     &__toggler {
-        background-image: url("../../img/cross.svg");
-        background-repeat: no-repeat;
-        background-position: 50%;
-        width: 24px;
-        height: 24px;
         position: absolute;
-        top: -45px;
+        top: -41px;
         right: 20px;
-        border: none;
+        z-index: 2;
+        display: block;
+        width: 24px;
+        height: 16px;
         background-color: #ffffff;
         cursor: pointer;
+        border: none;
         @media (min-width: @tablet-width) {
             display: none;
         }
+    }
+    &--opened &__toggler {
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 0px;
+            width: 24px;
+            height: 1.5px;
+            background-color: #000000;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+            box-shadow: none;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+    &--closed &__toggler::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 1.5px;
+        background-color: #000000;
+        box-shadow: 0 7px 0 0 #000000, 0 14px 0 0 #000000;
     }
     &__list {
         display: flex;

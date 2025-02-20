@@ -7,14 +7,20 @@
         justify-content: space-between;
     }
     @media (min-width: @desktop-width) {
+        display: grid;
+        grid-template-columns: repeat(4, 245px);
+        grid-template-rows: auto;
+        column-gap: 80px;
+        row-gap: 62px;
+
     }
     &__item {
         padding: 8px 0 11px 0;
         @media (min-width: @tablet-width) {
             padding: 0;
-            padding-bottom: 60px;
         }
         @media (min-width: @desktop-width) {
+            padding-bottom: 63px;
         }
     }
 }

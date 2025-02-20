@@ -11,6 +11,13 @@
         border-radius: 50%;
         box-sizing: border-box;
         margin-right: 16px;
+        @media (min-width: @tablet-width) {
+            width: 40px;
+            height: 40px;
+        }
+        @media (min-width: @desktop-width) {
+            
+        }
         .field__input[type="radio"]:checked + &::after {
             content: "";
             position: absolute;
@@ -20,6 +27,15 @@
             height: 14px;
             border-radius: 50%;
             background-color: #68B738;
+            @media (min-width: @tablet-width) {
+                width: 18px;
+                height: 18px;
+                left: 10px;
+                top: 10px;
+            }
+            @media (min-width: @desktop-width) {
+                
+            }
         }
     }
     &__checkbox {
@@ -31,12 +47,34 @@
         border: 1px solid #CDCDCD;
         box-sizing: border-box;
         margin-right: 16px;
+        @media (min-width: @tablet-width) {
+            width: 40px;
+            height: 40px;
+        }
+        @media (min-width: @desktop-width) {
+            
+        }
         .field__input[type="checkbox"]:checked + &::after {
-            content: url(../../img/checkbox.svg);
+            content: "";
+            width: 18px;
+            height: 14px;
+            display: block;
+            background-image: url(../../img/checkbox.svg);
+            background-repeat: no-repeat;
             position: absolute;
             top: 7px;
             left: 5px;
             color: #68B738;
+            @media (min-width: @tablet-width) {
+                top: 10px;
+                left: 8px;
+                width: 24px;
+                height: 19px;
+                background-size: 100%;
+            }
+            @media (min-width: @desktop-width) {
+                
+            }
         }
     }
     &:hover &__radio,

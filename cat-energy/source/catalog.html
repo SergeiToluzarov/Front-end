@@ -13,19 +13,16 @@
       <a href="index.html" class="page-header__logo">
         <img src="img/logo_text.svg" alt="Cat-Energy" width="101" height="18" aria-hidden="true">
       </a>
-      <button class="page-header__toggler" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <nav class="page-header__main-nav main-nav">
-        <div class="main-nav__wrapper site-menu">
-          <button class="site-menu__toggler">
-            <span class="visually-hidden">Закрыть меню</span>
-          </button>
+      <nav class="page-header__site-menu site-menu site-menu--nojs site-menu--closed">
+        <button class="site-menu__toggler" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="site-menu__wrapper">
           <ul class="site-menu__list">
             <li class="site-menu__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="site-menu__item  site-menu__item--current">
+            <li class="site-menu__item site-menu__item--current">
               <a href="#">Каталог продукции</a>
             </li>
             <li class="site-menu__item">
@@ -150,64 +147,65 @@
           <a href="" class="pagination__button button">Показать все</a>
         </div>
       </section>
-      <section class="page-main__section additional">
-        <h2 class="additional__title title">Дополнительные товары</h2>
-        <article class="additional__item add-card">
-          <a href="#" class="add-card__link">
-            <h3 class="add-card__heading title">Сахарозаменитель</h3>
-          </a>
-          <dl class="add-card__list">
-            <dt class="add-card__title visually-hidden">Колличество</dt>
-            <dd class="add-card__description">1 упаковка (100 г)</dd>
-            <dt class="add-card__title visually-hidden">Цена</dt>
-            <dd class="add-card__description">200 Р.</dd>
-          </dl>
-          <a href="#" class="add-card__button button">Заказать</a>
-        </article>
-        <article class="additional__item add-card">
-          <a href="#" class="add-card__link">
-            <h3 class="add-card__heading title">Питьевая вода</h3>
-          </a>
-          <dl class="add-card__list">
-            <dt class="add-card__title visually-hidden">Колличество</dt>
-            <dd class="add-card__description">5 литров</dd>
-            <dt class="add-card__title visually-hidden">Цена</dt>
-            <dd class="add-card__description">50 Р.</dd>
-          </dl>
-          <a href="#" class="add-card__button button">Заказать</a>
-        </article>
-        <article class="additional__item add-card">
-          <a href="#" class="add-card__link">
-            <h3 class="add-card__heading title">Молоко</h3>
-          </a>
-          <dl class="add-card__list">
-            <dt class="add-card__title visually-hidden">Колличество</dt>
-            <dd class="add-card__description">1 литр</dd>
-            <dt class="add-card__title visually-hidden">Цена</dt>
-            <dd class="add-card__description">100 Р.</dd>
-          </dl>
-          <a href="#" class="add-card__button button">Заказать</a>
-        </article>
-        <article class="additional__item add-card">
-          <a href="#" class="add-card__link">
-            <h3 class="add-card__heading title">Витамины</h3>
-          </a>
-          <dl class="add-card__list">
-            <dt class="add-card__title visually-hidden">Колличество</dt>
-            <dd class="add-card__description ">1 упаковка (30 г)</dd>
-            <dt class="add-card__title visually-hidden">Цена</dt>
-            <dd class="add-card__description">300 Р.</dd>
-          </dl>
-          <a href="#" class="add-card__button button">Заказать</a>
-        </article>
-      </section>
-      <section class="page-main__section gift">
-        <div class="gift__wrapper">
-          <h2 class="visually-hidden">Специальное предложение</h2>
-          <img class="gift__image" src="img/cat-in-bag.webp" aria-hidden="true">
-          <p class="gift__text text">Закажите все <br> и получите чехол для кота в подарок!</p>  
-        </div>
-      </section>
+      <div class="page-main__wrapper">
+        <section class="page-main__section additional">
+          <h2 class="additional__title title">Дополнительные товары</h2>
+          <article class="additional__item add-card">
+            <a href="#" class="add-card__link">
+              <h3 class="add-card__heading title">Сахарозаменитель</h3>
+            </a>
+            <dl class="add-card__list">
+              <dt class="add-card__title visually-hidden">Колличество</dt>
+              <dd class="add-card__description">1 упаковка (100 г)</dd>
+              <dt class="add-card__title visually-hidden">Цена</dt>
+              <dd class="add-card__description">200 Р.</dd>
+            </dl>
+            <a href="#" class="add-card__button button">Заказать</a>
+          </article>
+          <article class="additional__item add-card">
+            <a href="#" class="add-card__link">
+              <h3 class="add-card__heading title">Питьевая вода</h3>
+            </a>
+            <dl class="add-card__list">
+              <dt class="add-card__title visually-hidden">Колличество</dt>
+              <dd class="add-card__description">5 литров</dd>
+              <dt class="add-card__title visually-hidden">Цена</dt>
+              <dd class="add-card__description">50 Р.</dd>
+            </dl>
+            <a href="#" class="add-card__button button">Заказать</a>
+          </article>
+          <article class="additional__item add-card">
+            <a href="#" class="add-card__link">
+              <h3 class="add-card__heading title">Молоко</h3>
+            </a>
+            <dl class="add-card__list">
+              <dt class="add-card__title visually-hidden">Колличество</dt>
+              <dd class="add-card__description">1 литр</dd>
+              <dt class="add-card__title visually-hidden">Цена</dt>
+              <dd class="add-card__description">100 Р.</dd>
+            </dl>
+            <a href="#" class="add-card__button button">Заказать</a>
+          </article>
+          <article class="additional__item add-card">
+            <a href="#" class="add-card__link">
+              <h3 class="add-card__heading title">Витамины</h3>
+            </a>
+            <dl class="add-card__list">
+              <dt class="add-card__title visually-hidden">Колличество</dt>
+              <dd class="add-card__description ">1 упаковка (30 г)</dd>
+              <dt class="add-card__title visually-hidden">Цена</dt>
+              <dd class="add-card__description">300 Р.</dd>
+            </dl>
+            <a href="#" class="add-card__button button">Заказать</a>
+          </article>
+        </section>
+        <section class="page-main__section gift">
+          <div class="gift__wrapper">
+            <h2 class="visually-hidden">Специальное предложение</h2>
+            <p class="gift__text text">Закажите все <br> и получите чехол для кота в подарок!</p>  
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="page__footer page-footer">
       <div  class="page-footer__address address">
@@ -262,5 +260,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.site-menu');
+      var navToggle = document.querySelector('.site-menu__toggler');
+      
+      navMain.classList.remove('site-menu--nojs');
+      
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('site-menu--closed')) {
+          navMain.classList.remove('site-menu--closed');
+          navMain.classList.add('site-menu--opened');
+        } else {
+          navMain.classList.add('site-menu--closed');
+          navMain.classList.remove('site-menu--opened');
+        }
+      });
+    </script>
   </body>
 </html>
