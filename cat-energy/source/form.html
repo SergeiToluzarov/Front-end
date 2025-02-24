@@ -6,7 +6,10 @@
     <title>HTML Academy: Cat-Energy</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="icon" type="img/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page__header page-header">
@@ -168,7 +171,11 @@
           </p>  
         </div>
         <div class="address__wrapper">        
-          <img class="address__image" src="img/mobile-map.png" alt="Расположение на карте">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="address__image" src="img/map-mobile.jpg" width="320" height="362" Расположение на карте srcset="img/map-mobile@2x.jpg 2x">
+          </picture>
         </div>
       </div>
       <div class="page-footer__wrapper">
