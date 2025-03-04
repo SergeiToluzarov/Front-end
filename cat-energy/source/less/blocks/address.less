@@ -44,16 +44,23 @@
         text-align: left;
         width: 139px;
         color: #444444;
+        br {
+            display: none;
+        }
         @media (min-width: @tablet-width) {
             width: 160px;
             font-size: 16px;
             text-align: right;
             min-height: 80px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            position: relative;
+            top: -5px;
+            br {
+                display: block;
+            }
         }
         @media (min-width: @desktop-width) {
+            text-align: left;
+            left: 5px;
         }
     }
     &__wrapper {

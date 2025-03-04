@@ -16,8 +16,7 @@
         }
     }
     &__wrapper {
-        margin-top: 40px;
-        padding: 0 20px;
+        padding: 20px 20px 0;
         @media (min-width: @tablet-width) {
             padding: 0 30px;
         }
@@ -27,8 +26,13 @@
     }
     &__title{
         line-height: 40px;
+        text-align: start;
         @media (min-width: @tablet-width) {
             line-height: 60px;
+            padding-top: 45px;
+        }
+        @media (min-width: @desktop-width) {
+            padding-top: 71px;
         }
     }
     &__list{
@@ -50,24 +54,32 @@
         color: #444444;
         padding: 20px 0 0 80px;
         min-height: 60px;
-        max-width: 280px;
-        box-sizing: border-box;
         background-repeat: no-repeat;
         background-position: 0px 20px;
         background-size: 60px 60px;
+        br {
+            display: none;
+        }
         @media (min-width: @tablet-width) {
             max-width: 250px;
-            min-height: 280px;
+            min-height: initial;
             padding: 151px 0 57px 0;
             background-position: 0px 40px;
             background-size: 80px 80px;
             position: relative;
             margin-bottom: 37px;
+            br {
+                display: block;
+            }
+        }
+        @media (min-width: @desktop-width) {
+            max-width: 246px;
         }
     }
     &__item--healthy {
         background-image: url("../img/info-1.svg");
         @media (min-width: @tablet-width) {
+            background-image: url("../img/info-1-tablet.svg");
             &::after {
                 content: "1";
                 color: #f2f2f2;
@@ -84,6 +96,7 @@
     &__item--simple {
         background-image: url("../img/info-2.svg");
         @media (min-width: @tablet-width) {
+            background-image: url("../img/info-2-tablet.svg");
             &::after {
                 content: "2";
                 color: #f2f2f2;
@@ -100,6 +113,7 @@
     &__item--eating{
         background-image: url("../img/info-3.svg");
         @media (min-width: @tablet-width) {
+            background-image: url("../img/info-3-tablet.svg");
             &::after {
                 content: "3";
                 color: #f2f2f2;
@@ -116,6 +130,7 @@
     &__item--time {
         background-image: url("../img/info-4.svg");
         @media (min-width: @tablet-width) {
+            background-image: url("../img/info-4-tablet.svg");
             &::after {
                 content: "4";
                 color: #f2f2f2;

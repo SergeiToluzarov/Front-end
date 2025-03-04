@@ -30,12 +30,12 @@
     }
     &__toggler {
         position: absolute;
-        top: -41px;
+        top: -43px;
         right: 20px;
         z-index: 2;
         display: block;
         width: 24px;
-        height: 16px;
+        height: 18px;
         background-color: #ffffff;
         cursor: pointer;
         border: none;
@@ -72,7 +72,7 @@
         width: 24px;
         height: 1.5px;
         background-color: #000000;
-        box-shadow: 0 7px 0 0 #000000, 0 14px 0 0 #000000;
+        box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
     }
     &__list {
         display: flex;
@@ -81,12 +81,11 @@
             flex-direction: row;;
             flex-wrap: wrap;
             justify-content: space-between;
-            padding-bottom: 2px;
-            padding: 42px 0 10px 0;
+            padding: 42px 0 2px;
 
         }
         @media (min-width: @desktop-width) {
-            padding: 69px 0 8px 0;
+            padding: 69px 0 32px 0;
             &--index {
                 color: #ffffff
             }
@@ -99,14 +98,17 @@
         font-family: "Oswald", sans-serif;
         font-size: 20px;
         line-height: 20px;
-        padding: 20px 0 24px 0;
+        padding: 22px 0 23px 0;
         border-top: 1px solid #E6E6E6;
+        letter-spacing: 1px;
         @media (min-width: @tablet-width) {
+            letter-spacing: 0;
             font-size: 18px;
             line-height: 24px;
             border: none;
             padding: 0;
             &--current {
+                padding-bottom: 8px;
                 border-bottom: 2px solid #68B738;
             }
         }
@@ -114,6 +116,7 @@
             font-size: 20px;
             line-height: 30px;
             &--index_current{
+                padding-bottom: 6px;
                 border-bottom: 2px solid #ffffff;
 
             }

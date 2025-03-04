@@ -5,7 +5,7 @@
         padding-left: 53px
     }
     @media (min-width: @desktop-width) {
-        padding-left: 52px;
+        padding-left: 0px;
         width: 570px;
         box-sizing: border-box;
     }
@@ -16,17 +16,20 @@
         padding-top: 30px;
         padding-left: 71px;
         text-transform: uppercase;
+        text-align: start;
         @media (min-width: @tablet-width) {
             font-size: 36px;
             line-height: 36px;
-            padding-top: 77px;    
+            padding-top: 75px;    
             padding-left: 0;
         }
         @media (min-width: @desktop-width) {
             padding-left: 214px;
+            padding-top: 77px;
         }
     }
     &__text {
+        width: 227px;
         padding-top: 29px;
         @media (min-width: @tablet-width) {
             width: 340px;
@@ -35,10 +38,11 @@
         @media (min-width: @desktop-width) {
             width: 467px;
             padding-top: 73px;
+            padding-left: 52px;
         }
     }
     &__link {
-        padding: 38px 0 18px 0;
+        padding: 42px 0 22px 0;
         display: block;
         width: 134px;
         position: relative;
@@ -49,7 +53,7 @@
             line-height: 30px;
         }
         @media (min-width: @desktop-width) {
-            padding: 27px 0 59px 0;
+            padding: 27px 0 59px 52px;
         }
         &::before {
             content: "";
@@ -65,10 +69,10 @@
         &::after {
             content: url("../img/arrow.svg");
             position: absolute;
-            top: 37px;
-            right: 8px;
+            top: 40px;
+            right: 0;
             @media (min-width: @tablet-width) {
-                top: 50px;
+                top: 48px;
             } 
             @media (min-width: @desktop-width) {
                 top: 25px;

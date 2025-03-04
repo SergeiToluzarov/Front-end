@@ -7,23 +7,10 @@
             width: 592px;
             height: 511px;
             top: -170px;
-            left: 119px;
+            left: 90px;
         }
         @media (min-width: @desktop-width) {
             left: 0;
-        }
-    }
-    &__image--fat {
-        z-index: 1;
-        @media (min-width: @tablet-width) {
-            clip-path: inset(0 54% 0 0);
-        }
-    }
-    &__image--skinny {
-        z-index: -1;
-        @media (min-width: @tablet-width) {
-            z-index: 1;
-            clip-path: inset(0 0 0 46%);
         }
     }
     &__button {
@@ -31,17 +18,17 @@
         background-color: inherit;
         position: absolute;
         width: 49px;
-        height: 30px;
+        padding: 5px;
         text-transform: uppercase;
         text-align: center;
         font-family: "Oswald", sans-serif;
         font-size: 16px;
         line-height: 20px;
         cursor: pointer;
-        bottom: 40px;
+        bottom: 39px;
         
         @media (min-width: @tablet-width) {
-            bottom: 62px;
+            bottom: 57px;
             font-size: 20px;
             line-height: 30px;
             &::after {
@@ -49,35 +36,36 @@
                 position: absolute;
                 display: block;
                 width: 45px;
-                left: 2px;
+                left: 7px;
                 border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
             }
         }
         @media (min-width: @desktop-width) {
             background-color: #f2f2f2;
+            bottom: 56px;
         }
     }
     &__before {
         left: 35px;
         @media (min-width: @tablet-width) {
-            left: 100px;
+            left: 96px;
         }
         @media (min-width: @desktop-width) {
-            left: 0;
+            left: 8px;
         }
     }
     &__after {
         right: 35px;
         @media (min-width: @tablet-width) {
-            right: 100px;
+            right: 103px;
         }
         @media (min-width: @desktop-width) {
-            right: 0;
+            right: 14px;
         }
     }
     &__range {
         position: absolute;
-        bottom: 48px;
+        bottom: 47px;
         left: 97px;
         @media (min-width: @tablet-width) {
             bottom: 72px;
