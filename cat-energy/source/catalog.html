@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Cat-Energy</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="img/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -98,7 +98,7 @@
               <source type="image/webp" srcset="img/catalog-3-mobile.webp 1x, img/catalog-3-mobile@2x.webp 2x">  
               <source media="(min-width: 1440px)" srcset="img/catalog-3-desktop.png 1x, img/catalog-3-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/catalog-3-tablet.png 1x, img/catalog-3-tablet@2x.png 2x">
-              <img class="card__image" src="img/catalog-3-mobile.png" alt="" aria-hidden="true" width="68" height="86" srcset="img/catalog-3-mobile@2x.png 2x">
+              <img class="card__image" src="img/catalog-3-mobile.png" alt="" aria-hidden="true" width="68" height="78" srcset="img/catalog-3-mobile@2x.png 2x">
             </picture>
           </p>
           <dl class="card__list">
@@ -146,7 +146,7 @@
               <source type="image/webp" srcset="img/catalog-5-mobile.webp 1x, img/catalog-5-mobile@2x.webp 2x">  
               <source media="(min-width: 1440px)" srcset="img/catalog-5-desktop.png 1x, img/catalog-5-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/catalog-5-tablet.png 1x, img/catalog-5-tablet@2x.png 2x">
-              <img class="card__image" src="img/catalog-5-mobile.png" alt="" aria-hidden="true" width="68" height="86" srcset="img/catalog-5-mobile@2x.png 2x">
+              <img class="card__image" src="img/catalog-5-mobile.png" alt="" aria-hidden="true" width="68" height="76" srcset="img/catalog-5-mobile@2x.png 2x">
             </picture>
           </p>
           <dl class="card__list">
@@ -274,14 +274,11 @@
       </div>
     </main>
     <footer class="page__footer page-footer">
-      <div  class="page-footer__address address">
+      <div  class="page-footer__address address address--index">
         <div class="address__info">
           <h2 class="visually-hidden">Наш адрес</h2>
           <p class="address__title title">Приглашаем <br> к сотрудничеству дилеров!</p>
-          <p class="address__text text"> 
-            <span>ул. Большая Конюшенная, д. 19/8</span>
-            <span>Санкт-Петербург</span>
-          </p>  
+          <span class="address__text text">ул. Большая Конюшенная, д. 19/8 <br><br> Санкт-Петербург</span>  
         </div>
         <div class="address__wrapper">        
           <picture>
@@ -304,7 +301,7 @@
             <li class="socials__item socials__item--vk">
               <a class="socials__link" href="https://vk.com/htmlacademy">
                 <svg viewBox="0 0 23 16" fill="none">
-                  <use href="img/sprite3.svg#socials-vk"></use>
+                  <use href="img/sprite.svg#icon_vkontakte"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Вконтакте</span>
               </a>
@@ -312,7 +309,7 @@
             <li class="socials__item socials__item--instagram">
               <a class="socials__link" href="https://www.instagram.com/htmlacademy">
                 <svg viewBox="0 0 16 16" fill="none">
-                  <use href="img/sprite3.svg#socials-instagram"></use>
+                  <use href="img/sprite.svg#icon_instagram"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Инстаграме</span>
                 </a>
@@ -320,7 +317,7 @@
             <li class="socials__item socials__item--facebook">
               <a class="socials__link" href="https://www.facebook.com/htmlacademy">
                 <svg viewBox="0 0 22 22" fill="none">
-                  <use href="img/sprite3.svg#socials-facebook"></use>
+                  <use href="img/sprite.svg#icon_facebook"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Фейсбуке</span>
               </a>
@@ -332,26 +329,12 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text text">HTML Academy</span>
             <svg width="27" height="34">
-              <use href="img/sprite3.svg#copyright"></use>
+              <use href="img/sprite.svg#html_academy"></use>
             </svg>
+          </a>
         </div>
       </div>
     </footer>
-    <script>
-      var navMain = document.querySelector('.site-menu');
-      var navToggle = document.querySelector('.site-menu__toggler');
-      
-      navMain.classList.remove('site-menu--nojs');
-      
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('site-menu--closed')) {
-          navMain.classList.remove('site-menu--closed');
-          navMain.classList.add('site-menu--opened');
-        } else {
-          navMain.classList.add('site-menu--closed');
-          navMain.classList.remove('site-menu--opened');
-        }
-      });
-    </script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

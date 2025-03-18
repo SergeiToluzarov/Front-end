@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Cat-Energy</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="img/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -35,7 +35,6 @@
         </div>
       </nav>
     </header>
-
     <main class="page__main page-main">
       <h1 class="page-main__header page-main__header--form title">Подбор программы</h1>
       <form class="page-main__form form" action="https://echo.htmlacademy.ru/" method="post">
@@ -101,18 +100,18 @@
                 <input class="field__input" type="email" name="email" id="email" placeholder="Ваш e-mail" value="kuklachev@gmail.com" required>
                 <span class="field__image field__image--email">
                   <svg width="19" height="14" fill="none">
-                    <use href="img/sprite3.svg#email"></use>
+                    <use href="img/sprite.svg#mail"></use>
                   </svg>
                   </span>
               </label>
             </li>
             <li class="field__item">
               <label class="field__label" for="phone">
-                <span class="field__lead">Вес (кг):<span class="form__asterix">*</span></span>
+                <span class="field__lead">Телефон:<span class="form__asterix">*</span></span>
                 <input class="field__input" type="tel" name="phone" id="phone" placeholder="Ваш номер телефона" value="8 (960) 900-60-90" required pattern="^8 \(\d{3}\) \d{3}-\d{2}-\d{2}$|^8\d{10}">
                 <span class="field__image field__image--phone">
                   <svg width="20" height="21"  fill="currentColor">
-                    <use href="img/sprite3.svg#phone"></use>
+                    <use href="img/sprite.svg#phone"></use>
                   </svg>
                 </span>
               </label>
@@ -158,19 +157,16 @@
         </fieldset>
         <div class="form__wrapper">
           <button class="form__button button" type="submit">Отправить заявку</button>
-          <p class="form__notation"><span class="form__asterix">*</span>— Обязательные поля</p>
+          <p class="form__notation"><span class="form__asterix">*</span> &mdash; Обязательные поля</p>
         </div>
       </form>
     </main>
     <footer class="page__footer page-footer">
-      <div  class="page-footer__address address">
+      <div  class="page-footer__address address address--index">
         <div class="address__info">
           <h2 class="visually-hidden">Наш адрес</h2>
           <p class="address__title title">Приглашаем <br> к сотрудничеству дилеров!</p>
-          <p class="address__text text"> 
-            <span>ул. Большая Конюшенная, д. 19/8</span>
-            <span>Санкт-Петербург</span>
-          </p>  
+          <span class="address__text text">ул. Большая Конюшенная, д. 19/8 <br><br> Санкт-Петербург</span>  
         </div>
         <div class="address__wrapper">        
           <picture>
@@ -193,7 +189,7 @@
             <li class="socials__item socials__item--vk">
               <a class="socials__link" href="https://vk.com/htmlacademy">
                 <svg viewBox="0 0 23 16" fill="none">
-                  <use href="img/sprite3.svg#socials-vk"></use>
+                  <use href="img/sprite.svg#icon_vkontakte"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Вконтакте</span>
               </a>
@@ -201,7 +197,7 @@
             <li class="socials__item socials__item--instagram">
               <a class="socials__link" href="https://www.instagram.com/htmlacademy">
                 <svg viewBox="0 0 16 16" fill="none">
-                  <use href="img/sprite3.svg#socials-instagram"></use>
+                  <use href="img/sprite.svg#icon_instagram"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Инстаграме</span>
                 </a>
@@ -209,7 +205,7 @@
             <li class="socials__item socials__item--facebook">
               <a class="socials__link" href="https://www.facebook.com/htmlacademy">
                 <svg viewBox="0 0 22 22" fill="none">
-                  <use href="img/sprite3.svg#socials-facebook"></use>
+                  <use href="img/sprite.svg#icon_facebook"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Фейсбуке</span>
               </a>
@@ -221,26 +217,12 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text text">HTML Academy</span>
             <svg width="27" height="34">
-              <use href="img/sprite3.svg#copyright"></use>
+              <use href="img/sprite.svg#html_academy"></use>
             </svg>
+          </a>
         </div>
       </div>
     </footer>
-    <script>
-      var navMain = document.querySelector('.site-menu');
-      var navToggle = document.querySelector('.site-menu__toggler');
-      
-      navMain.classList.remove('site-menu--nojs');
-      
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('site-menu--closed')) {
-          navMain.classList.remove('site-menu--closed');
-          navMain.classList.add('site-menu--opened');
-        } else {
-          navMain.classList.add('site-menu--closed');
-          navMain.classList.remove('site-menu--opened');
-        }
-      });
-    </script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

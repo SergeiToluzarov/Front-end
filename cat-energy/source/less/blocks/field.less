@@ -28,7 +28,8 @@
         font-weight: 400;
         line-height: 26px;
         text-align: left;       
-        padding: 13px 20px 35px 0;
+        padding: 0 20px 36px 0;
+        margin-bottom: -25px;
         background-color: #ffffff;
         &::after {
             content: "";
@@ -37,29 +38,34 @@
             background-color: #68B738;
             position: absolute;
             z-index: -1;
-            top: 29px;
+            top: 15px;
             right: -20px;
             @media (min-width: @tablet-width) {
                 width: @tablet-width;
                 left: -30px;
                 right: initial;
-                top: 89px;
+                top: 87px;
             }
             @media (min-width: @desktop-width) {
                 width: @desktop-width;
                 left: -70px;
-                
+                top: 73px;
             }
         }
         @media (min-width: @tablet-width) {
             font-size: 36px;
             line-height: 36px;
             padding: 65px 40px 76px 39px;
+            margin-bottom: 0;
             position: relative;
             left: -39px;
             br {
                 display: none;
             }
+        }
+        @media (min-width: @desktop-width) {
+            padding-top: 50px;
+            
         }
     }
     &__additional {
@@ -68,9 +74,10 @@
             flex-wrap: wrap;
             justify-content: space-between;
             width: 565px;
+            margin-top: -20px;
         }
         @media (min-width: @desktop-width) {
-            width: 100%;
+            width: 1196px;
         }
     }
     &__list {
@@ -98,6 +105,7 @@
             }
             .field__additional &{
                 width: 221px;
+                padding-bottom: 32px;
             }
         }
         @media (min-width: @desktop-width) {
@@ -121,12 +129,12 @@
         @media (min-width: @tablet-width) {
             font-size: 20px;
             line-height: 30px;       
-            padding-right: 12px;     
+            padding-right: 17px;     
         }
     }
     &__input {
         flex-grow: 1;
-        padding: 12px 0 13px 16px;
+        padding: 13px 0 13px 16px;
         text-transform: uppercase;
         font-family: Oswald;
         font-size: 16px;
@@ -176,15 +184,18 @@
         border-radius: 0px;
         box-sizing: border-box;
         padding: 9px 0 0 15px;
+        margin-top: 5px;
         @media (min-width: @tablet-width) {
             width: 631px;
             height: 174px;
             font-size: 20px;
             line-height: 30px;
             padding: 10px 0 0 19px;
+            margin: 0 0 -3px 0;
         }
         @media (min-width: @desktop-width) {
             width: 100%;
+            margin-bottom: 13px;
         }
         &:hover {
             border-color: #CDCDCD;

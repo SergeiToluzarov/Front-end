@@ -8,7 +8,7 @@
         min-width: 440px;
     }
     @media (min-width: @desktop-width) {
-        width: 478px;
+        min-width: 478px;
     } 
     &--nojs {
         position: static;
@@ -27,6 +27,10 @@
     }
     &--opened &__wrapper {
         display: block;
+        border-bottom: 1px solid #E6E6E6;
+        @media (min-width: @tablet-width) {
+            border: none;
+        } 
     }
     &__toggler {
         position: absolute;
@@ -108,7 +112,7 @@
             border: none;
             padding: 0;
             &--current {
-                padding-bottom: 8px;
+                padding-bottom: 6px;
                 border-bottom: 2px solid #68B738;
             }
         }

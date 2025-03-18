@@ -37,12 +37,22 @@
     }
     &__text {
         padding-top: 40px;
+        br {
+            display: none;
+        }
         @media (min-width: @tablet-width) {
             color: #444444;
             padding-top: 63px;
+            br {
+                display: block;
+            }
         }
         @media (min-width: @desktop-width) {
             padding: 0;
+            width: 432px;
+            br {
+                display: none;
+            }    
         }
     }
     &__list {
@@ -141,7 +151,6 @@
         @media (min-width: @desktop-width) {
             min-width: 591px;
             background-color: #f2f2f2;
-            top: -10px;
             margin: 0;
             padding: 0;
         }
